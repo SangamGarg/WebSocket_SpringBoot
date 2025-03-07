@@ -1,7 +1,5 @@
-package com.websocket.messaging_stomp_websocket;
+package com.websocket.messaging_stomp_websocket.testingModule;
 
-import com.websocket.messaging_stomp_websocket.models.Greeting;
-import com.websocket.messaging_stomp_websocket.models.HelloMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;

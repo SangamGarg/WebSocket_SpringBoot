@@ -1,4 +1,4 @@
-package com.websocket.messaging_stomp_websocket.models;
+package com.websocket.messaging_stomp_websocket.testingModule;
 
 import lombok.*;
 
