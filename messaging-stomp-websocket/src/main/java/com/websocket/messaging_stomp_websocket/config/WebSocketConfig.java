@@ -1,5 +1,6 @@
 package com.websocket.messaging_stomp_websocket.config;
 
+import com.websocket.messaging_stomp_websocket.appConstants.AppConstants;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
@@ -19,7 +20,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/chat").setAllowedOrigins("http://localhost:5173").withSockJS();
+        registry.addEndpoint("/chat").setAllowedOrigins(AppConstants.APP_URL_FRONTEND).withSockJS();
         // /chat endpoint par connection establish hota h
     }
 }

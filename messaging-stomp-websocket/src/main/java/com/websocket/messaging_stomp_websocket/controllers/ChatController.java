@@ -1,6 +1,7 @@
 package com.websocket.messaging_stomp_websocket.controllers;
 
 
+import com.websocket.messaging_stomp_websocket.appConstants.AppConstants;
 import com.websocket.messaging_stomp_websocket.models.Message;
 import com.websocket.messaging_stomp_websocket.models.MessageRequest;
 import com.websocket.messaging_stomp_websocket.services.ChatServices;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin(AppConstants.APP_URL_FRONTEND)
 public class ChatController {
     @Autowired
     private ChatServices chatServices;

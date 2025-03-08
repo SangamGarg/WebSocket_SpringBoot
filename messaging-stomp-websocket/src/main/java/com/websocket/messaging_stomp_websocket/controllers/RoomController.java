@@ -1,5 +1,6 @@
 package com.websocket.messaging_stomp_websocket.controllers;
 
+import com.websocket.messaging_stomp_websocket.appConstants.AppConstants;
 import com.websocket.messaging_stomp_websocket.models.Message;
 import com.websocket.messaging_stomp_websocket.models.Room;
 import com.websocket.messaging_stomp_websocket.services.RoomServices;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/rooms")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin(AppConstants.APP_URL_FRONTEND)
 public class RoomController {
     @Autowired
     private RoomServices roomServices;
@@ -31,7 +32,7 @@ public class RoomController {
 
     @GetMapping("/{roomId}/messages")
     public ResponseEntity<List<Message>> getMessages(@PathVariable String roomId, @RequestParam(value = "page", defaultValue = "0", required = false) int page, @RequestParam(value = "size", defaultValue = "20", required = false) int size) {
-        return roomServices.getMessages(roomId,page,size);
+        return roomServices.getMessages(roomId, page, size);
     }
 
     //getMessagesOfTheRoom
